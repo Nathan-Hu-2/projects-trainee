@@ -6,16 +6,11 @@
 
 body {
   font-family: "Arciform";
-  background-color: #333A45;
+  background-color: #333a45;
   line-height: 1.6em;
   margin: 0;
-}
-
-img {
-    width: 200px;
-    height: auto;
-    top: 0px;
-    right: 0px;
+  height: 100%;
+  padding:0;
 }
 
 /* .img {
@@ -25,23 +20,31 @@ img {
 } */
 
 h1 {
-    font-family: "Arciform";
-    margin: 0;
-    line-height: normal;
-    top: 350px;
-
+  font-family: "Arciform";
+  margin: 0;
+  line-height: normal;
+  top: 35%;
 }
 
 .icons {
-  text-align: center;
-  font-size: 70px;
+  font-size: 40px;
+  color: #f44c7f;
 }
+/* 
+.fa-github {
+  padding-left: 100px;
+} */
 
 .hero {
   text-align: center;
+  height: 100%;
+  background-color: #333a45;
+  min-height: 550px;
   height: 100vh;
-  /* display: flex; */
-  /* flex-direction: column; */
+}
+
+.title {
+  padding-top: 37vh;
 }
 
 .greeting {
@@ -50,41 +53,88 @@ h1 {
   color: #f44c7f;
   margin: 0;
   position: relative;
-  /* left: 150px; */
-  /* top: 350px */
 }
 
 .my-name {
-  position: relative;
-  /* left: 150px; */
+  position:relative;
   font-size: 100px;
   color: #e9ecf0;
-  margin: 10;
-  /* top: 350px; */
-    
-  
+  margin: 0;
+}
+
+.page-2 {
+  text-align: left;
+  background-color:#333a44;
+  min-height: 350px;
+  height: 50vh;
+  padding-top: 10%;
+}
+
+.page-3 {
+  text-align: right;
+  background-color:#333a44;
+  min-height: 350px;
+  height: 100vh;
+  padding-top: 10%;
+}
+
+h3 {
+  color: #e9ecf0;
+  font-size: 40px;
+}
+
+.projects {
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: right;
 }
 
 
-.page-2 {
-  position: relative;
-  top: 800px;
-  padding-left: 150px;
-  padding-right: 150px;
-  background-color: #FFFFFF;
+.about-me {
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .body-text {
   color: #939EAE
 }
 
+
+h2 {
+  color: #e9ecf0;
+  font-size: 40px;
+  padding-left: 15%;
+}
+
+p {
+  font-size: 17px;
+}
+
+img {
+  width: 200px;
+  height: auto;
+  top: 0px;
+  right: 0px;
+}
+
+
+
 a {
-  background: linear-gradient(to right, #333a45, #333a45),
+  background: linear-gradient(to right, #333a44, #333a45),
     linear-gradient(to right, #ffffff, #ffffff, #f44c7f, #f44c7f);
   background-size: 100% 0.1em, 0 0.1em;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
+}
+a:visited {
+  color: #f44c7f;  
+  text-decoration: none;
+}
+a:link {
+  color: #f44c7f;
+  position: relative;
+  text-decoration: none;
 }
 
 a:hover,
@@ -93,136 +143,191 @@ a:focus {
   color: #f44c7f;
 }
 
-a:visited {
-  color: #f44c7f;
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 
-/* .rain {
-    position: absolute;
-    width: 1rem;
-    height: 10rem;
-    background: #ffffff;
-    border-radius: 20%;
-    opacity: 0.2;
-    z-index: -1;
-  }
-  
-  .drop {
-    width: 1rem;
-    height: 7rem;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 20%;
-    opacity: 0.2;
-  }
-  
-  .rain1 {
-    left: 5rem;
-    top: 2rem;
-    animation: raining 2s linear infinite both;
-  }
-  
-  .rain2 {
-    left: 15rem;
-    top: 10rem;
-    animation: raining 3s linear infinite both;
-  }
-  
-  .drop2 {
-    top: 12rem;
-    animation: raining 4s linear infinite both -2s;
-  }
-  
-  .rain3 {
-    left: 5rem;
-    top: 35rem;
-    animation: raining 3s linear infinite both;
-  }
-  
-  .rain4 {
-    right: 23rem;
-    top: 6rem;
-    animation: raining 4s linear infinite both;
-  }
-  
-  .rain5 {
-    left: 25rem;
-    top: 47rem;
-    animation: raining 3s linear infinite both -3s;
-  }
-  
-  .drop5 {
-    top: -6rem;
-    animation: raining 2s linear infinite both;
-  }
-  
-  .rain6 {
-    right: 10rem;
-    top: 34rem;
-    animation: raining 3s linear infinite both;
-  }
-  
-  .rain7 {
-    left: 34rem;
-    top: 10rem;
-    animation: raining 2s linear infinite both -5s;
-  }
-  
-  .rain8 {
-    right: 25rem;
-    top: 40rem;
-    animation: raining 3s linear infinite both;
-  }
-  
-  .drop8 {
-    top: -7rem;
-    animation: raining 4s linear infinite both -6s;
-  }
-  
-  .rain9 {
-    right: 5rem;
-    top: 15.5rem;
-    animation: raining 3s linear infinite both;
-  }
-  
-  .rain10 {
-    left: 24rem;
-    top: -4rem;
-    animation: raining 2s linear infinite both -3s;
-  }
-  
-  /* .drop11 {
-    right: 17rem;
-    top: 20rem;
-    animation: raining 3s linear infinite both;
-  }
-  
-  .drop12 {
-    right: 15rem;
-    top: 50rem;
-    animation: raining 4s linear infinite both -1s;
-  }
-  
-  @keyframes raining {
-    from {
-      transform: translateY(-1200px);
-    }
-    to {
-      transform: translateY(869px);
-    }
-  } */
+/* Hero Page Scroll Wheel Animation */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
 
 
-  /* ---- particles.js container ---- */
-
-  #particles-js {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+.mouse_scroll {
+	display: block;
+	margin: 0 auto;
+	width: 24px;
+	height: 100px;
+  position: absolute;  
+  right: 5vh;
+  top: 80vh;
 }
 
 
-/* Type Animation */
-/* 
-/* NOTE: I only tested this on Google Chrome.*/
+.m_scroll_arrows
+{
+  display: block;
+  width: 5px;
+  height: 5px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+   
+  border-right: 2px solid #f44c7f;
+  border-bottom: 2px solid #f44c7f;
+  margin: 0 0 3px 4px;
+  
+  width: 16px;
+  height: 16px;
+}
+
+
+.unu
+{
+  margin-top: 1px;
+}
+
+.unu, .doi, .trei
+{
+    -webkit-animation: mouse-scroll 1s infinite;
+    -moz-animation: mouse-scroll 1s infinite;
+    animation: mouse-scroll 1s infinite;
+  
+}
+
+.unu
+{
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  -webkit-animation-direction: alternate;
+  
+  animation-direction: alternate;
+  animation-delay: alternate;
+}
+
+.doi
+{
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+  
+  animation-delay: .2s;
+  animation-direction: alternate;
+  
+  margin-top: -6px;
+}
+
+.trei
+{
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -webkit-animation-direction: alternate;
+  
+  animation-delay: .3s;
+  animation-direction: alternate;
+  
+  
+  margin-top: -6px;
+}
+
+.mouse {
+  height: 42px;
+  width: 24px;
+  border-radius: 14px;
+  transform: none;
+  border: 2px solid #f44c7f;
+  top: 170px;
+}
+
+.wheel {
+  height: 5px;
+  width: 2px;
+  display: block;
+  margin: 5px auto;
+  background: #f44c7f;
+  position: relative;
+  
+  height: 4px;
+  width: 4px;
+  border: 2px solid #f44c7f;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+}
+
+.wheel {
+  -webkit-animation: mouse-wheel 0.6s linear infinite;
+  -moz-animation: mouse-wheel 0.6s linear infinite;
+  animation: mouse-wheel 0.6s linear infinite;
+}
+
+@-webkit-keyframes mouse-wheel{
+   0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@-moz-keyframes mouse-wheel {
+  0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+@-o-keyframes mouse-wheel {
+
+   0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+@keyframes mouse-wheel {
+
+   0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+
+@-webkit-keyframes mouse-scroll {
+
+  0%   { opacity: 0;}
+  50%  { opacity: .5;}
+  100% { opacity: 1;}
+}
+@-moz-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@-o-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
