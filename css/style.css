@@ -1,22 +1,14 @@
 @font-face {
-    font-family: "Glitch";
-    font-style: normal;
-    font-weight: normal; 
-    src: url("./css/fonts/SystemGlitch-Regular.woff") format('woff');
-}
-
-@font-face {
     font-family: "Arciform"; 
     src: url("//db.onlinewebfonts.com/t/401746ea18398fb74710226c4250341e.eot"); 
     src: url("//db.onlinewebfonts.com/t/401746ea18398fb74710226c4250341e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/401746ea18398fb74710226c4250341e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/401746ea18398fb74710226c4250341e.woff") format("woff"), url("//db.onlinewebfonts.com/t/401746ea18398fb74710226c4250341e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/401746ea18398fb74710226c4250341e.svg#Arciform") format("svg"); 
 }
 
 body {
-    font-family: "Arciform";
-    background-color: #333A45;
-    line-height: 1.6em;
-    padding-top: 50px;
-    margin: 0;
+  font-family: "Arciform";
+  background-color: #333A45;
+  line-height: 1.6em;
+  margin: 0;
 }
 
 img {
@@ -26,35 +18,87 @@ img {
     right: 0px;
 }
 
+/* .img {
+  display: inline-block;
+  height: 100px;
+  z-index: 100;
+} */
+
 h1 {
-    font-family: "Glitch";
+    font-family: "Arciform";
     margin: 0;
     line-height: normal;
+    top: 350px;
+
+}
+
+.icons {
+  text-align: center;
+  font-size: 70px;
+}
+
+.hero {
+  text-align: center;
+  height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
 
 .greeting {
-    font-size: 25px;
-    color: #f44c7f;
-    margin: 0;
+  font-family: "Arciform";
+  font-size: 25px;
+  color: #f44c7f;
+  margin: 0;
+  position: relative;
+  /* left: 150px; */
+  /* top: 350px */
 }
 
 .my-name {
-    position: relative;
-    font-size: 100px;
-    color: #e9ecf0;
-    margin: 10;
+  position: relative;
+  /* left: 150px; */
+  font-size: 100px;
+  color: #e9ecf0;
+  margin: 10;
+  /* top: 350px; */
+    
+  
+}
+
+
+.page-2 {
+  position: relative;
+  top: 800px;
+  padding-left: 150px;
+  padding-right: 150px;
+  background-color: #FFFFFF;
 }
 
 .body-text {
-    color: #939EAE
+  color: #939EAE
 }
 
-.main-section {
-    min-height: 500px;
-    padding: 150px;
+a {
+  background: linear-gradient(to right, #333a45, #333a45),
+    linear-gradient(to right, #ffffff, #ffffff, #f44c7f, #f44c7f);
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
 }
 
-.rain {
+a:hover,
+a:focus {
+  background-size: 0 0.1em, 100% 0.1em;
+  color: #f44c7f;
+}
+
+a:visited {
+  color: #f44c7f;
+}
+
+
+/* .rain {
     position: absolute;
     width: 1rem;
     height: 10rem;
@@ -148,7 +192,7 @@ h1 {
     animation: raining 2s linear infinite both -3s;
   }
   
-  .drop11 {
+  /* .drop11 {
     right: 17rem;
     top: 20rem;
     animation: raining 3s linear infinite both;
@@ -167,4 +211,18 @@ h1 {
     to {
       transform: translateY(869px);
     }
-  }
+  } */
+
+
+  /* ---- particles.js container ---- */
+
+  #particles-js {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Type Animation */
+/* 
+/* NOTE: I only tested this on Google Chrome.*/
